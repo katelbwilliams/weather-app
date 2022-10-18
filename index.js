@@ -42,9 +42,8 @@ function showTemp(response) {
   document.querySelector("#minimum").innerHTML = Math.round(
     response.data.main.temp_min
   );
+  axios.get(apiUrl).then(showTemp);
 }
-
-axios.get(apiUrl).then(showTemp);
 
 function searchCity(city) {
   let apiKey = `3980a7c8f2a782241a093131b099f993`;

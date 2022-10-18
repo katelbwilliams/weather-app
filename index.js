@@ -24,10 +24,18 @@ function formatDate(date) {
 }
 
 function showTemp(response) {
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humididy");
+  let windElement = document.querySelector("#wind");
+
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humididy;
+  windElement.innerHTML = math.round(response.data.wind.speed);
+
   document.querySelector("#maximum").innerHTML = Math.round(
     response.data.main.temp_max
   );
@@ -35,6 +43,8 @@ function showTemp(response) {
     response.data.main.temp_min
   );
 }
+
+axios.get(apiUrl).then(showTemp);
 
 function searchCity(city) {
   let apiKey = `3980a7c8f2a782241a093131b099f993`;

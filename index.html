@@ -13,26 +13,26 @@
 </head>
 
 <body>
-    </br>
-    <form class="search-form" id="search-form">
-        <div class="row">
-            <div class="col-3">
-                <input type="search" placeholder="Search.." autofocus="on" autocomplete="off" id="city-input"
-                    class="form-control shadow-sm" />
-            </div>
-            <div class="col-2">
-                <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm" />
-            </div>
-            <div class="col-2">
-                <button class="btn btn-success shadown-sm w-100" id=current-location-button>
-                    Current
-                </button>
-            </div>
-        </div>
-    </form>
-    </br>
     <div class="container text-center">
         <div class="weather-app">
+            <form class="search-form" id="search-form">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="search" placeholder="Search.." autofocus="on" autocomplete="off" id="city-input"
+                            class="form-control shadow-sm" />
+                    </div>
+                    <div class="col-3">
+                        <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm" />
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-success shadown-sm w-100" id=current-location-button>
+                            Current
+                        </button>
+                    </div>
+                </div>
+            </form>
+            </br>
+
             <h1 id=city></h1>
             <ul>
                 <li id=date></li>
@@ -40,7 +40,7 @@
             </ul>
             <div class="row">
                 <div class="col-6">
-                    <img src="" alt="Clear"> </img>
+                    <img src="" alt=""> </img>
                     <span class="temperature" id=temperature></span>
                     <span class="units">
                         <a href="#" id="celsius-link">°C</a> |
@@ -49,13 +49,13 @@
                 </div>
                 <div class="col-6">
                     <ul>
-                        <li>Humidity: <span id="humidity"></span>%</li>
+                        <li>Humididy: <span id="humididy"></span>%</li>
                         <li>Wind: <span id="wind"></span> m/h</li>
                     </ul>
                 </div>
-                <div class="row-3">
-                    <div class="col" id=faren>max: <span id=maximum></span>°</div>
-                    <div class="col" id=celc>min: <span id=minimum></span>°</div>
+                <div class="row">
+                    <div class="col-3" id=faren>max: <span id=maximum></span>°</div>
+                    <div class="col-3" id=celc>min: <span id=minimum></span>°</div>
                 </div>
             </div>
 
@@ -90,10 +90,10 @@
         <br />
     </div>
     </div>
-    <small>
+    <span class="footer">
         <a href="https://github.com/katelbwilliams/weather-app" target=”_blank”> Open source code</a> by Kate Williams
         <script src='index.js'></script>
-    </small>
+    </span>
 </body>
 
 </html>

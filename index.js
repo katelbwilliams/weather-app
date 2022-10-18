@@ -24,17 +24,23 @@ function formatDate(date) {
 }
 
 function showTemp(response) {
+  console.log(response);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
-  let humidityElement = document.querySelector("#humididy");
+  let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = response.data.main.humididy;
-  windElement.innerHTML = math.round(response.data.wind.speed);
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+  );
 
   document.querySelector("#maximum").innerHTML = Math.round(
     response.data.main.temp_max
@@ -42,7 +48,6 @@ function showTemp(response) {
   document.querySelector("#minimum").innerHTML = Math.round(
     response.data.main.temp_min
   );
-  axios.get(apiUrl).then(showTemp);
 }
 
 function searchCity(city) {

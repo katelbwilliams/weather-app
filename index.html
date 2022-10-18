@@ -39,7 +39,7 @@
                 <li id="description"></li>
             </ul>
             <div class="row">
-                <div class="d-flex weather-temperature">
+                <div class="weather-temperature">
                     <img src="" alt="Clear" id="icon" />
                     <span class="temperature" id=temperature></span>
                     <span class="units">
@@ -47,15 +47,15 @@
                         <a href="#" id="fahrenheit-link">°F</a>
                     </span>
                 </div>
+                <div class="row">
+                    <div class="col-6" id=faren>max: <span id=maximum></span>°</div>
+                    <div class="col-6" id=celc>min: <span id=minimum></span>°</div>
+                </div>
                 <div class="col-6">
                     <ul>
                         <li>Humidity: <span id="humidity"></span>%</li>
                         <li>Wind: <span id="wind"></span> m/h</li>
                     </ul>
-                </div>
-                <div class="row">
-                    <div class="col-3" id=faren>max: <span id=maximum></span>°</div>
-                    <div class="col-3" id=celc>min: <span id=minimum></span>°</div>
                 </div>
             </div>
 
@@ -90,10 +90,11 @@
         <br />
     </div>
     </div>
-    <span class="footer">
+    <span id="footer">
         <a href="https://github.com/katelbwilliams/weather-app" target=”_blank”> Open source code</a> by Kate Williams
-        <script src='index.js'></script>
     </span>
+    <script src='index.js'></script>
+
 </body>
 
 </html>

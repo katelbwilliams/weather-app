@@ -24,7 +24,6 @@ function formatDate(date) {
 }
 
 function showTemp(response) {
-  console.log(response);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");

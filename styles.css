@@ -22,15 +22,16 @@ li {
   margin: 5px;
 }
 
-.footer {
-  text-align: center;
+li:first-letter {
+  text-transform: capitalize;
 }
+
 .temperature {
   font-size: 80px;
 }
 
 #city {
-  color: rgb(17, 75, 114);
+  color: rgb(41, 143, 211);
   text-transform: capitalize;
 }
 .days {
